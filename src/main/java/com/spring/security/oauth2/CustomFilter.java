@@ -6,23 +6,24 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.web.filter.GenericFilterBean;
+import org.springframework.web.filter.OncePerRequestFilter;
 
 
 class CustomFilter extends GenericFilterBean {
 
-	Logger log = LoggerFactory.getLogger(this.getClass());
-	
+
 	@Override
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain)
 			throws IOException, ServletException {
 		
 		logger.info(request.getServletContext().getContextPath());
 		
-		chain.doFilter(request, response);
+		filterChain.doFilter(request, response);
+		
 	}
 
 }
