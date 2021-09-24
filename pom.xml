@@ -8,11 +8,11 @@
 		<version>2.5.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.spring.security.oauth2</groupId>
-	<artifactId>oauth2</artifactId>
+	<groupId>com.spring.security</groupId>
+	<artifactId>spring-oauth2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>oauth2</name>
-	<description>OAuth2</description>
+	<name>spring-oauth2</name>
+	<description>Demostration of Spring OAuth2</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
